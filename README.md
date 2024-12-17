@@ -342,4 +342,94 @@ Tabla de Horarios: TablaHorario muestra los horarios existentes.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+![image](https://github.com/user-attachments/assets/65f3cc38-7df1-423c-ba79-f423724b2fcf)
+
+
+Método cargarTrabajadores:
+
+Consulta la base de datos para recuperar los nombres de los trabajadores desde la tabla datos_trabajador.
+Los nombres se cargan en un JComboBox llamado cmbTrabajador.
+Método cargarHorarios:
+
+Ejecuta una consulta para obtener los datos de los horarios relacionados con los trabajadores desde las tablas horario y datos_trabajador.
+Los resultados se muestran en un JTable (TablaHorario) usando un modelo de tabla (DefaultTableModel).
+Formulario y componentes GUI:
+
+Incluye varios componentes:
+JComboBox para seleccionar un trabajador.
+Campos de texto (txtHoraE y txtHoraS) para ingresar la hora de entrada y salida.
+Un calendario (HorarioF) para seleccionar la fecha.
+Un botón (btnAsignarH) para asignar horarios a trabajadores.
+Acción del botón btnAsignarH:
+
+Valida los datos ingresados (fecha, hora de entrada y salida).
+Obtiene el Id_trabajador del trabajador seleccionado desde la base de datos.
+Inserta un nuevo registro en la tabla horario con los datos proporcionados.
+Gestión de excepciones:
+
+Usa bloques try-catch para manejar errores de conexión y operaciones SQL, mostrando mensajes de error con JOptionPane.
+![image](https://github.com/user-attachments/assets/97940153-6511-4f98-8490-1e8290063bd8)
+
+--------------
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/2af42d34-ae59-464a-a733-25cedf39104b)
+
+
+
+Carga de datos desde la base de datos:
+
+La consulta SQL selecciona todas las columnas necesarias desde la tabla proveedor. El método cargarDatosProveedor se encarga de ejecutar esta consulta y rellenar el modelo de la tabla (DefaultTableModel).
+Interacción con la base de datos:
+
+Estás utilizando un bloque try-with-resources que es una buena práctica para manejar recursos como conexiones (Connection), declaraciones (PreparedStatement) y conjuntos de resultados (ResultSet).
+Sin embargo, asegúrate de manejar adecuadamente excepciones específicas de la base de datos para dar mensajes más descriptivos al usuario.
+Integración gráfica:
+
+La tabla TablaProveedor se actualiza dinámicamente al presionar el botón "Ver proveedores" (jButton1).
+Proporcionas navegación hacia otras ventanas (por ejemplo, el menú del encargado y la creación de proveedores) con los botones respectivos.
+Modelo de la tabla:
+
+Usas un DefaultTableModel para gestionar la tabla de proveedores. Esto funciona, pero puedes considerar implementar un modelo más robusto si se requiere mayor funcionalidad, como edición.
+
+![image](https://github.com/user-attachments/assets/2fa88883-a739-47a8-aa08-eff3bb98067c)
+
+
+
+![image](https://github.com/user-attachments/assets/7d04411d-756d-4755-b938-207faa25a295)
+
+![image](https://github.com/user-attachments/assets/7a5a2fd4-8921-4872-bb5f-36a29ed43937)
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![image](https://github.com/user-attachments/assets/fa5feb99-3aaf-4c1c-9c52-5b046163f4b7)
+
+Carga de datos desde la base de datos:
+
+La consulta SQL selecciona todas las columnas necesarias desde la tabla proveedor. El método cargarDatosProveedor se encarga de ejecutar esta consulta y rellenar el modelo de la tabla (DefaultTableModel).
+Interacción con la base de datos:
+
+Estás utilizando un bloque try-with-resources que es una buena práctica para manejar recursos como conexiones (Connection), declaraciones (PreparedStatement) y conjuntos de resultados (ResultSet).
+Sin embargo, asegúrate de manejar adecuadamente excepciones específicas de la base de datos para dar mensajes más descriptivos al usuario.
+Integración gráfica:
+
+La tabla TablaProveedor se actualiza dinámicamente al presionar el botón "Ver proveedores" (jButton1).
+Proporcionas navegación hacia otras ventanas (por ejemplo, el menú del encargado y la creación de proveedores) con los botones respectivos.
+Modelo de la tabla:
+
+Usas un DefaultTableModel para gestionar la tabla de proveedores. Esto funciona, pero puedes considerar implementar un modelo más robusto si se requiere mayor funcionalidad, como edición.
+
+
+
+
+![image](https://github.com/user-attachments/assets/c223be45-15d6-4849-9a24-ba6d13492c87)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![image](https://github.com/user-attachments/assets/009178e4-86c8-4c40-ad5f-2d37072d080a)
+
+
+![image](https://github.com/user-attachments/assets/61dc91b3-6dde-4599-bb3a-89a306d7ff25)
+
 
